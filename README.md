@@ -21,31 +21,37 @@ _(Always make a backup before updating, you never know.)_
 
 ## Quick facts & answers
 
-_Why another f*ing guide ?_
+- [x] _Why another f*ing guide ?_
 
-- I don't like the way [all those guides](https://www.tonymacx86.com/forums/mojave-laptop-guides.197/) are written.<br>
-  Sorry Nguyenmac, Rehabman & Spotflight, I read them a hundred times but it's really hard to understand how we got here.<br>
+- For no good reason honestly, I don't like the way [all those guides](https://www.tonymacx86.com/forums/mojave-laptop-guides.197/) are written & wanted to keep a summary / step by step guide for myself but then decided to share it here...<br>
+  Sorry Nguyenmac, Rehabman & Spotflight, I read them a hundred times but it's really hard to understand how we got there, it feels like there's too much noise, _'useless'/generic_ info.<br>
   I think it's the forum that makes it _'less readable'_, the general look, font, structure... I don't know.<br>
   This guide will focus on doing the job instead of explaining every step, so there is that.
 
-_Why this laptop ?_
+- [x] _Why this laptop ?_
 
 - I had to buy it when I studied at Epitech Strasbourg, in France.<br>
-  This specific laptop was mandatory & totally not worth the money.<br>
-  If I had another device, I'd gladly hackintosh it too, it's a fun and enriching experiment !
+  This specific laptop was mandatory & **absolutely not worth** the money.<br>
+  _And this laptop is cursed... So... let it burn._
 
-_Do I risk anything ?_
+- [x] _Why a hackintosh ? Wasn't Linux enough of an adventure ?_
+
+- Fair enough, Linux is a whole world to explore and it keeps expanding everyday.<br>
+  The thing is, for around 5 to 6 years I've been able to experiment on Linux & Windows, but now I feel like I should also look at MacOS and other BSD based systems because it's _"different"_. Used to have colleagues with Macbooks and they definitely got their job done so why not give it a try ?<br>
+  The problem was : giving it a try meant at least 700€ in cash and I don't have that 😂
+
+- [x] _Do I risk anything ?_
 
 - You could fry your Motherboard or CPU, corrupt your HDD / SSD, lose precious data if there are any, get sued by Apple, find yourself teleported into AREA 51 ..<br>
   I mean, anything is possible right ?
 
-_Can I get the Wifi / Bluetooth card to work ?_
+- [x] _Can I get the Wifi / Bluetooth card to work ?_
 
 - The short answer is no.<br>
   The longer answer would be :<br>
   "Because Apple never used Intel Wifi cards, there's no support for them.<br>
   You could potentially swap your current card for one used by Apple.<br>
-  A refurbished Broadcom BCM94352Z on Ali-XPress should do the trick !"
+  A refurbished Broadcom BCM94352Z on AliHeck's Press should do the trick !"
 
 --------------------------------------------------------------------------------
 
@@ -54,6 +60,7 @@ _Can I get the Wifi / Bluetooth card to work ?_
 - Intel **i7-5600U**
 - Intel **HD 5500**
 - Radeon R7 M260X _(Disabled)_
+- Intel Wireless AC-7265 _(disabled)_
 - 8Gb DDR3 @ 1600MHz
 - 14"- 1920*1080
 - 500Gb HDD - SATA
@@ -67,42 +74,44 @@ Hackintosh guides are "kinda" vanilla but this one will really focus on the Broa
 
 ### HARDWARE
 
-- **A legit Apple device running MacOS**. _Can be a Mac Mini, Macbook (Pro), iMac, iWhatever._<br>
+- [x] **A legit Apple device running MacOS**. _Can be a Mac Mini, Macbook (Pro), iMac, iWhatever._<br>
   _Don't use a VM for this, you'll waste your time, but a Hackintosh would work lmao_
-- **An Ethernet Cable**<br>
+- [x] **An Ethernet Cable**<br>
   _You won't have Wi-Fi_
-- **USB Flash Drive** - at leat 8Gb<br>
+- [x] **USB Flash Drive** - at leat 8Gb<br>
   _USB 2.0 seems more stable but 3.0 works too_
-- **HDD / SSD** SATA or mSATA<br>
+- [x] **HDD / SSD** SATA or mSATA<br>
   **_For NVMe drives you'll need a different guide._**
 
 #### When you're finished gathering all that, download all of the following on your Mac :
 
 ### SOFTWARE
 
-- [Clover Installer](https://sourceforge.net/projects/cloverefiboot/files/Installer/)
-- [HPFanReset.efi](https://bitbucket.org/RehabMan/hp-probook-4x30s-fan-reset/downloads/HPFanReset-2013-1205.efi.zip)
-- [Config.plist](https://raw.githubusercontent.com/RehabMan/OS-X-Clover-Laptop-Config/master/config_HD5300_5500_6000.plist) Right click & Save as `config.plist`
+- [x] [Clover Installer](https://sourceforge.net/projects/cloverefiboot/files/Installer/)
+- [x] [HPFanReset.efi](https://bitbucket.org/RehabMan/hp-probook-4x30s-fan-reset/downloads/HPFanReset-2013-1205.efi.zip)
+- [x] [Config.plist](https://raw.githubusercontent.com/RehabMan/OS-X-Clover-Laptop-Config/master/config_HD5300_5500_6000.plist) Right click & Save as `config.plist`
 
 ### KEXTS
 
-Name                     | Link
------------------------- | ---------------------------------------------------------------------------------------------------------------------------
-Centralized Kext Repo    | [OneDrive](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw)                                                              |
-FakeSMC.kext             | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455161)                              |
-IntelMausiEthernet       | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455134)                              |
-Lilu.kext                | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455053)                              |
-RealtekRTL8111.kext      | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455143)                              |
-SATA-Unsupported.kext    | [OneDrive](https://raw.githubusercontent.com/RehabMan/hack-tools/master/kexts/SATA-unsupported.kext/) Right click & Save as |
-USBInjectAll.kext        | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455146)                              |
-VoodooPS2Controller.kext | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455152)                              |
-WhateverGreen.kext       | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455095)                              |
-For USB Tethering only   | 👇                                                                                                                          |
-HoRNDIS                  | [Official Site](https://joshuawise.com/horndis#available_versions)
+Name                         | Link
+---------------------------- | ----------------------------------------------------------------------------------------------
+Centralized Kext Repo        | [OneDrive](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw)                                 |
+FakeSMC.kext                 | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455161) |
+IntelMausiEthernet           | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455134) |
+Lilu.kext                    | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455053) |
+RealtekRTL8111.kext          | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455143) |
+SATA-Unsupported.kext        | [OneDrive](https://github.com/RehabMan/hack-tools/archive/master.zip)                          |
+USBInjectAll.kext            | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455146) |
+VoodooPS2Controller.kext     | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455152) |
+WhateverGreen.kext           | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455095) |
+For USB Tethering (optional) | 👇                                                                                             |
+HoRNDIS                      | [Official Site](https://joshuawise.com/horndis#available_versions)
 
 --------------------------------------------------------------------------------
 
-#### Once all of this is ready, you can jump into [Step 1](/I-BIOS/README.md)
+### Once all of this is ready, you can jump into [Step 1](/I-BIOS/README.md)
+
+--------------------------------------------------------------------------------
 
 # Credits
 
@@ -111,8 +120,8 @@ I knew the drive was automagically kept up-to-date so I decided to go with a cen
 
 I've never been good at thanking people but here we go :
 
-- [Acidanthera](https://github.com/acidanthera/) - **Illuminati** Everything. Can't say much more. Thanks for your work guys.
-- [NguyenMac](https://www.tonymacx86.com/members/nguyenmac.598852/) - **Guide Senpai** For creating and maintaining the guide I used to follow for so long, contributed to make me a _mad_ SysAdmin.
+- [Acidanthera](https://github.com/acidanthera/) - **Illuminati** Thanks for your work guys. Can't say much more.
+- [NguyenMac](https://www.tonymacx86.com/members/nguyenmac.598852/) - **Guide Senpai** For creating and maintaining the guide I used to follow for so long, contributed to turn me into a _mad_ SysAdmin.
 - [Rehabman](https://github.com/rehabman) - **Laptop Guru** Guides, configs, kexts, SSDTS, ~drugs,~ **you name it**. This guy has 'em all !
 - [Spotflight](https://www.tonymacx86.com/members/spotflight.1654314/) - **Elitebook Chief** For his simplified / modernized guide which helped me avoid some obsolete tricks I used to use.
 - Every single other contributor, developer, pioneer who helped achieve all of this.
