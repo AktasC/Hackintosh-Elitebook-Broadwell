@@ -88,14 +88,18 @@ Hackintosh guides are "kinda" vanilla but this one will really focus on the Broa
 ### SOFTWARE
 
 - [x] [Clover Installer](https://sourceforge.net/projects/cloverefiboot/files/Installer/)
-- [x] [HPFanReset.efi](https://bitbucket.org/RehabMan/hp-probook-4x30s-fan-reset/downloads/HPFanReset-2013-1205.efi.zip)
+- [x] [HFSPlus.efi & HPFanReset.efi](https://bitbucket.org/RehabMan/hp-probook-4x30s-fan-reset/downloads/HPFanReset-2013-1205.efi.zip)
 - [x] [Config.plist](https://raw.githubusercontent.com/RehabMan/OS-X-Clover-Laptop-Config/master/config_HD5300_5500_6000.plist) Right click & Save as `config.plist`
 
 ### KEXTS
 
+Centralized Kext Repo                                   | Link
+------------------------------------------------------- | --------------------------------------------------------------
+This is a drive where you'll find most vanilla kexts    | [OneDrive](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw) |
+Always nice to keep in case you want to update anything | ☝️ Bookmark this ☝️                                            |
+
 Name                         | Link
 ---------------------------- | ----------------------------------------------------------------------------------------------
-Centralized Kext Repo        | [OneDrive](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw)                                 |
 FakeSMC.kext                 | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455161) |
 IntelMausiEthernet           | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455134) |
 Lilu.kext                    | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455053) |
@@ -120,9 +124,11 @@ I knew the drive was automagically kept up-to-date so I decided to go with a cen
 
 I've never been good at thanking people but here we go :
 
-- [Acidanthera](https://github.com/acidanthera/) - **Illuminati** Thanks for your work guys. Can't say much more.
+- [Acidanthera](https://github.com/acidanthera/) - **Illuminati** Can't say much more... Thanks for your work guys !
 - [NguyenMac](https://www.tonymacx86.com/members/nguyenmac.598852/) - **Guide Senpai** For creating and maintaining the guide I used to follow for so long, contributed to turn me into a _mad_ SysAdmin.
 - [Rehabman](https://github.com/rehabman) - **Laptop Guru** Guides, configs, kexts, SSDTS, ~drugs,~ **you name it**. This guy has 'em all !
 - [Spotflight](https://www.tonymacx86.com/members/spotflight.1654314/) - **Elitebook Chief** For his simplified / modernized guide which helped me avoid some obsolete tricks I used to use.
 - Every single other contributor, developer, pioneer who helped achieve all of this.
 - _Coffee & poverty made me do it_.
+
+@CebAkt - 2019
