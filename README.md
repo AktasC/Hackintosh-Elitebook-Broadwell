@@ -1,3 +1,5 @@
+# Work In Progress
+
 # Vanilla MacOS Mojave on an HP Elitebook 840 G2
 
 Welcome on another Hackintosh guide !
