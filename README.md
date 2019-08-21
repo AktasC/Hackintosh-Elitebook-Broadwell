@@ -38,7 +38,7 @@ _(Always make a backup before updating, you never know.)_
 
 - Fair enough, Linux is a whole world to explore and it keeps expanding everyday.<br>
   The thing is, for around 5 to 6 years I've been able to experiment on Linux & Windows, but now I feel like I should also look at MacOS and other BSD based systems because it's _"different"_. Used to have colleagues with Macbooks and they definitely got their job done so why not give it a try ?<br>
-  The problem was : giving it a try meant at least 700€ in cash and I don't have that 😂
+  The problem was : giving it a try meant at least 700€ in cash (for the lowest config) and I don't have that 😂
 
 - [x] _Do I risk anything ?_
 
@@ -90,13 +90,14 @@ Hackintosh guides are "kinda" vanilla but this one will really focus on the Broa
 - [x] [Clover Installer](https://sourceforge.net/projects/cloverefiboot/files/Installer/)
 - [x] [HFSPlus.efi & HPFanReset.efi](https://bitbucket.org/RehabMan/hp-probook-4x30s-fan-reset/downloads/HPFanReset-2013-1205.efi.zip)
 - [x] [Config.plist](https://raw.githubusercontent.com/RehabMan/OS-X-Clover-Laptop-Config/master/config_HD5300_5500_6000.plist) Right click & Save as `config.plist`
+- [x] [MacOS Mojave](https://apps.apple.com/fr/app/macos-mojave/id1398502828?mt=12)
 
 ### KEXTS
 
 Centralized Kext Repo                                   | Link
 ------------------------------------------------------- | --------------------------------------------------------------
 This is a drive where you'll find most vanilla kexts    | [OneDrive](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw) |
-Always nice to keep in case you want to update anything | ☝️ Bookmark this ☝️                                            |
+Always nice to keep in case you want to update anything | ☝️ Bookmark this                                             |
 
 Name                         | Link
 ---------------------------- | ----------------------------------------------------------------------------------------------
@@ -131,4 +132,4 @@ I've never been good at thanking people but here we go :
 - Every single other contributor, developer, pioneer who helped achieve all of this.
 - _Coffee & poverty made me do it_.
 
-@CebAkt - 2019
+@AktasC - 2019

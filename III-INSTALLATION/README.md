@@ -15,4 +15,4 @@
 - Every single other contributor, developer, pioneer who helped achieve all of this.
 - _Coffee & poverty made me do it_.
 
-@CebAkt - 2019
+@AktasC - 2019
