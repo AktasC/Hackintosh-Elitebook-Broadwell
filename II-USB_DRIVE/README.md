@@ -62,7 +62,14 @@ You should have a brand new USB stick named CLOVER
 
 ## 3 - Finalizing
 - Start a terminal
-- ` `
+- `sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/INSTALLER`
+- - Input your password when asked to
+- - Press `y` to confirm
+- Close the terminal when it's done
+- Eject the USB drive
+
+#### Your USB drive is now loaded with MacOS !
+
 --------------------------------------------------------------------------------
 
 ### Once all of this is ready, you can jump into [Step 3](/III-INSTALLATION/README.md)

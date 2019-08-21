@@ -80,7 +80,7 @@ Hackintosh guides are "kinda" vanilla but this one will really focus on the Broa
   _Don't use a VM for this, you'll waste your time, but a Hackintosh would work lmao_
 - [x] **An Ethernet Cable**<br>
   _You won't have Wi-Fi_
-- [x] **USB Flash Drive** - at leat 8Gb<br>
+- [x] **USB Flash Drive** - at leat 12Gb<br>
   _USB 2.0 seems more stable but 3.0 works too_
 - [x] **HDD / SSD** SATA or mSATA<br>
   **_For NVMe drives you'll need a different guide._**
