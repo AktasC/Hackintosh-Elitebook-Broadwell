@@ -28,7 +28,7 @@
   _`sudo apt install p7zip-full` || `sudo pacman -Syu p7zip-full` || `sudo eopkg it p7zip` depending on your distro._
 
 - [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases)
-- [AppleCorePkg](https://github.com/acidanthera/AppleSupportPkg/releases)
+- [AppleSupportPkg](https://github.com/acidanthera/AppleSupportPkg/releases)
 
 - [HFSPlus.efi & HPFanReset.efi](https://bitbucket.org/RehabMan/hp-probook-4x30s-fan-reset/downloads/HPFanReset-2013-1205.efi.zip)
 
@@ -36,16 +36,18 @@
 
 ### KEXTS
 
-| Name                     | Link                                                                                           |
-| ------------------------ | ---------------------------------------------------------------------------------------------- |
-| VirtualSmc               | [VirtualSMC-x.x.x-RELEASE](https://github.com/acidanthera/VirtualSMC/releases)                 |
-| IntelMausiEthernet.kext  | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455134) |
-| Lilu                     | [Lilu-x.x.x-RELEASE](https://github.com/acidanthera/Lilu/releases)                             |
-| RealtekRTL8111.kext      | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455143) |
-| SATA-Unsupported.kext    | [OneDrive](https://github.com/RehabMan/hack-tools/archive/master.zip)                          |
-| USBInjectAll.kext        | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455146) |
-| VoodooPS2Controller.kext | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455152) |
-| WhateverGreen            | [WhateverGreen-x.x.x-RELEASE](https://github.com/acidanthera/WhateverGreen/releases)           |
+| Name                | Link                                                                                           |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| AppleALC            | [AppleALC-x.x.x-RELEASE](https://github.com/acidanthera/AppleALC/releases)                     |
+| CPUFriend           | [CPUFriend-x.x.x-RELEASE](https://github.com/acidanthera/CPUFriend/releases)                   |
+| IntelMausi          | [IntelMausi-1.0.2-RELEASE](https://github.com/acidanthera/IntelMausi/releases)                 |
+| Lilu                | [Lilu-x.x.x-RELEASE](https://github.com/acidanthera/Lilu/releases)                             |
+| OpenCoreShell       | [OpenCoreshell-x.x.x-RELEASE](https://github.com/acidanthera/OpenCoreShell/releases)           |
+| RealtekRTL8111      | [OneDrive](https://onedrive.live.com/?authkey=%21APjCyRpzoAKp4xs&id=FE4038DA929BFB23%21455143) |
+| SATA-Unsupported    | [OneDrive](https://github.com/RehabMan/hack-tools/archive/master.zip)                          |
+| VirtualSmc          | [VirtualSMC-x.x.x-RELEASE](https://github.com/acidanthera/VirtualSMC/releases)                 |
+| VoodooPS2Controller | [VoodooPS2Controller-x.x.x-RELEASE](https://github.com/acidanthera/VoodooPS2/releases)         |
+| WhateverGreen       | [WhateverGreen-x.x.x-RELEASE](https://github.com/acidanthera/WhateverGreen/releases)           |
 
 | For USB Tethering (optional) | 👇                                                                 |
 | ---------------------------- | ------------------------------------------------------------------ |
@@ -63,43 +65,40 @@ We will now focus on the `EFI` folder.
 - Unzip all the other archives you've downloaded and look at this structure :
 
 ```
-|--EFI
-   |   |--BOOT
-   |   |   |--BOOTx64.efi
-   |   |--OC (Main folder)
-   |   |   |--ACPI
-   |   |   |--Drivers
-   |   |   |   |--ApfsDriverLoader.efi
-   |   |   |   |--AppleUsbKbDxe.efi
-   |   |   |   |--FwRuntimeServices.efi
-   |   |   |   |--HPFanReset.efi
-   |   |   |   |--NvmExpressDxe.efi
-   |   |   |   |--VBoxHfs.efi
-   |   |   |   |--XhciDxe.efi
-   |   |   |--Kexts
-   |   |   |   |--AppleALC.kext
-   |   |   |   |--CPUFriend.kext
-   |   |   |   |--IntelMausiEthernet.kext
-   |   |   |   |--Lilu.kext
-   |   |   |   |--RealtekRTL8111.kext
-   |   |   |   |--SATA-unsupported.kext
-   |   |   |   |--SMCBatteryManager.kext
-   |   |   |   |--SMCLightSensor.kext
-   |   |   |   |--SMCProcessor.kext
-   |   |   |   |--SMCSuperIO.kext
-   |   |   |   |--VirtualSMC.kext
-   |   |   |   |--VoodooPS2Controller.kext
-   |   |   |   |--WhateverGreen.kext
-   |   |   |--Tools
-   |   |   |   |--CleanNvram.efi
-   |   |   |   |--VerifyMsrE2.efi
-   |   |   |--OpenCore.efi
+── EFI
+    ├── BOOT
+    │   └── BOOTx64.efi
+    └── OC
+        ├── ACPI
+        ├── Drivers
+        │   ├── ApfsDriverLoader.efi
+        │   ├── AppleUsbKbDxe.efi
+        │   ├── FwRuntimeServices.efi
+        │   ├── HPFanReset.efi
+        │   ├── NvmExpressDxe.efi
+        │   ├── VBoxHfs.efi
+        │   └── XhciDxe.efi
+        ├── Kexts
+        │   ├── CPUFriend.kext
+        │   ├── IntelMausiEthernet.kext
+        │   ├── Lilu.kext
+        │   ├── RealtekRTL8111.kext
+        │   ├── SATA-unsupported.kext
+        │   ├── SMCBatteryManager.kext
+        │   ├── SMCLightSensor.kext
+        │   ├── SMCProcessor.kext
+        │   ├── SMCSuperIO.kext
+        │   ├── VirtualSMC.kext
+        │   ├── VoodooPS2Controller.kext
+        │   └── WhateverGreen.kext
+        ├── OpenCore.efi
+        └── Tools
+            ├── CleanNvram.efi
+            ├── Shell.efi
+            └── VerifyMsrE2.efi
 ```
 
-<small>Throw a coin to your InsanelyMacDiscord for the base snippet !</small>
-
 - You need to place each element in it's corresponding folder.  
-  _Pay attention to the file extension (`.kext` / `.efi`), some files may have the same name._  
   _You don't have to keep any .dsym or utility binary, **what you see is what you need** !_
 
 ---
