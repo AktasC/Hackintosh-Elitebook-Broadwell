@@ -17,6 +17,9 @@ I've never been good at thanking people but here we go :
 - [Spotflight](https://www.tonymacx86.com/members/spotflight.1654314/) - **Elitebook Chief**  
   For his simplified / modernized guide which helped me avoid some obsolete tricks I used to use.
 
+- [Midi Jari](https://internet-install.gitbook.io/) - **Loonix Toon**  
+  I didn't expect those OS nicknames but I also laughed way too much, thanks.
+
 - **Every single other contributor, developer, pioneer in the hackintosh scene** who helped achieve all of this.
 
 _Coffee & poverty made me do it_.

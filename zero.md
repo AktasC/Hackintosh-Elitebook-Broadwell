@@ -18,12 +18,17 @@
 
 ### SOFTWARE
 
+- **Bash**  
+  _Sorry guys, you'll have to put fish/zsh aside for this guide for simplicity's sake_
+
 - [gibMacOS](https://github.com/corpnewt/gibMacOS)  
   _This will allow us to create a MacOS Recovery Live USB_
 
+- p7zip-full  
+  _`sudo apt install p7zip-full` || `sudo pacman -Syu p7zip-full` || `sudo eopkg it p7zip` depending on your distro._
+
 - [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases)
-- [AppleCorePkg](https://github.com/acidanthera/AppleSupportPkg/releases)  
-  _What would we do without those guys ?_
+- [AppleCorePkg](https://github.com/acidanthera/AppleSupportPkg/releases)
 
 - [HFSPlus.efi & HPFanReset.efi](https://bitbucket.org/RehabMan/hp-probook-4x30s-fan-reset/downloads/HPFanReset-2013-1205.efi.zip)
 
@@ -91,10 +96,11 @@ We will now focus on the `EFI` folder.
    |   |   |--OpenCore.efi
 ```
 
-<small>Thanks to InsanelyMacDiscord for the base snippet !</small>
+<small>Throw a coin to your InsanelyMacDiscord for the base snippet !</small>
 
 - You need to place each element in it's corresponding folder.  
-  _Pay attention to the file extension (`.kext` / `.efi`), some files may have the same name._
+  _Pay attention to the file extension (`.kext` / `.efi`), some files may have the same name._  
+  _You don't have to keep any .dsym or utility binary, **what you see is what you need** !_
 
 ---
 

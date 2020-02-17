@@ -4,80 +4,68 @@ _"You should probably fully charge your Elitebook"_- Justin Case
 
 ---
 
-## Ø - Preparation
+## Ø - Partition & Format
+
+_Now is the time to show me your trust, we're gonna have some CLI party time !_
 
 - Launch a terminal
-- `diskutil list`
-- You need your **USB DRIVE'S** `IDENTIFIER` must look like `disk1`
-  - Double check it's the good one and not your HDD.
-- `diskutil partitionDisk /dev/IDENTITIFER 2 MBR FAT32 "CLOVER" 200Mi HFS+J "INSTALL" R`
-  - Double check you've replaced `IDENTIFIER` with the proper `diskX` before pressing ENTER
+- Run `lsblk` and look for your USB drive's /dev/sdx  
+  _for me it's /dev/sdf so I'll use that as reference, please change the `sdf` by the corresponding value_
 
-You should have a brand new USB stick named CLOVER
-
----
-
-## I - Installation
-
-- Run the Clover installer you downloaded earlier
-- Next
-- Click on `Change Installation Location` and set it on `CLOVER`
-- Select `Customize`
-  - [x] Install for UEFI booting only
-  - [x] Install Clover in the ESP
-- 64Bit Drivers
-  - [x] AptioMemoryFix
-  - [x] ApfsDriverLoader
-  - [x] AudioDxe
-  - [x] FSInject
-  - [x] SMCHelper
-  - [x] VBoxHfs
-- Install
-- _Grab a cup of coffee_
-- Close the Clover installer
-- Copy `HFSPlus.efi` & `HPFanReset.efi` to `/Volumes/CLOVER/EFI/CLOVER/drivers/UEFI/`
+- Run `sudo gdisk /dev/sdf`
+  - Type `p` to check the current partitionning
+    If it's the good one :
+    - Type `o` to wipe the hell out of it.
+      - Type `y` to confirm the shot.
+  - Type `n` to create a new partition
+    - Partition number: `Enter`
+    - First Sector: `Enter`
+    - Last Sector: `+200M` → `Enter`
+    - Hex / GUID: `0700` → `Enter`
+  - Type `p` to check that everything's as planned.  
+    _You should have a single Microsoft Basic Data partition of 199/200Mb_
+  - Type `n` again
+    - Partition number: `Enter`
+    - First Sector: `Enter`
+    - Last Sector: `Enter`
+    - Hex / GUID: `af00` → `Enter`
+  - Type `p` to check everything.  
+    _You should now have a new Apple HFS/HFS+ partition alongside the first one_
 
 ---
 
-## II - Adding Kexts
+## I - GibMacOS & p7zip
 
-- Open a Finder in `/Volumes/CLOVER/EFI/CLOVER/kexts/Other/`
-- Copy and paste these kexts in that folder :
-  - `FakeSMC.kext`
-  - `Lilu.kext`
-  - `IntelMausiEthernet.kext`
-  - `RealtekRTL8111.kext`
-  - `SATA-unsupported.kext`
-  - `USBInjectAll.kext`
-  - `VoodooPS2Controlleer.kext`
-  - `WhateverGreen.kext`
-- Open the `config.plist` you downloaded earlier
-- Delete this part of the file :
+_Now is the time to download the actual recovery image for our Live USB drive._
 
-```XML
-    <key>DVMT-prealloc</key>
-    <string>32MB BIOS, 19MB framebuffer, 9MB cursor bytes (credit RehabMan)</string>
-    <key>framebuffer-patch-enable</key>
-    <integer>1</integer>
-    <key>framebuffer-stolenmem</key>
-    <data>AAAwAQ==</data>
-    <key>framebuffer-fbmem</key>
-    <data>AACQAA==</data>
-```
+- Unzip gibMacOS and `cd` into it in your terminal.
+- Run `./gibMacOS.command -r -v 10.14` or `python gibMacOS.command -r -v 10.14`
+  _This will download the latest Recovery image for MacOS Mojave._
 
-- Save & Close
-- Copy your `config.plist` to `/Volumes/CLOVER/EFI/CLOVER/` (replace the old one)
+---
+
+## II - Installation
+
+!> TODO
+
+- Run `sudo dd if=4.hfs of=/dev/sdf bs=8M`
+
+---
+
+## III - Adding Kexts
+
+!> TODO
+
+- Run `sudo mount /dev/sdf1 /mnt` and open your file explorer.
+- Open the `/mnt` folder
+- Copy and paste the EFI & Utilities folders in `/mnt`
 
 ---
 
 ## III - Finalizing
 
-- Start a terminal
-- `sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/INSTALLER`
-  - Input your password when asked to
-  - Press `y` to confirm
-- Close the terminal when it's done
-- Eject the USB drive
+!> TODO
+
 
 #### Your USB drive is now loaded with MacOS !
 
