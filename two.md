@@ -1,7 +1,6 @@
 # II - USB Drive
 
-Grab your Mac & your USB drive, put your Elitebook away and let's create a bootable USB.
-_"You should probably charge up your Elitebook"_- Justin Case
+_"You should probably fully charge your Elitebook"_- Justin Case
 
 ---
 
@@ -66,7 +65,7 @@ You should have a brand new USB stick named CLOVER
     <data>AACQAA==</data>
 ```
 
-  - Save & Close
+- Save & Close
 - Copy your `config.plist` to `/Volumes/CLOVER/EFI/CLOVER/` (replace the old one)
 
 ---
@@ -84,7 +83,9 @@ You should have a brand new USB stick named CLOVER
 
 ---
 
-### Once all of this is ready, you can jump into [Step 3](three.md)
+---
+
+### Once all of this is done, you can jump into [Step 3](three.md)
 
 ---
 

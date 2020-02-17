@@ -1,48 +1,49 @@
 # I - BIOS
 
-Before installing MacOS we have to set our BIOS properly.<br>
+Before installing MacOS we have to setup our BIOS properly.  
 It needs to look "fresh outta factory" so let's clean that up !
 
 ---
 
 ## Ø - Enter BIOS Menu
 
-- Your laptop needs to have AC and Ethernet connected.
-- Boot it up.
-- Press `F10` on boot.<br>
-  If you're late, press `CTRL + ALT + DEL` and retry.
+- Plug in the AC & Ethernet.
+- Power on the Elitebook.
+- Smash `F10` like your life depends on it.
+
+?> If you're late, press `CTRL + ALT + DEL` and retry.
 
 ---
 
 ## I - Update your BIOS
 
 - **Main Tab**
-- Update system BIOS
-  - Check HP.com for BIOS Updates
-- Let it install & reboot (approx 3mn)
+  - Update system BIOS
+    - Check HP.com for BIOS Updates
+- Let it install & reboot (~ 3-5mn)
 
 ---
 
 ## II - Restore default settings
 
-- [Enter BIOS menu](#ø---enter-bios-menu)
+- [Enter BIOS menu](/one?id=%c3%98-enter-bios-menu)
 - **Main Tab**
-- Restore Defaults
-  - Yes
+  - Restore Defaults
+    - Yes
 - Reboot
 
 ---
 
 ## III - Set the BIOS for MacOS
 
-Since whe restored the default settings, we will only need to change a handful of settings.<br>
-If what I check is already checked or what I uncheck is already unchecked : let it be.<br>
-All we need is to have the same options enabled and disabled, don't touch anything unless you know what you're doing.<br>
-You'll have plenty of time to tweak and play with them **once it works**.<br>
+Since whe restored the default settings, we will only need to change a handful of settings.  
+If what I check is already checked or what I uncheck is already unchecked : let it be.  
+All we need is to have the same options enabled and disabled, **don't touch anything unless you know what you're doing.**  
+You'll have plenty of time to tweak and play with them **once it works**.
 
 Here we go then :
 
-- [Enter BIOS menu](#ø---enter-bios-menu)
+- [Enter BIOS menu](/one?id=%c3%98-enter-bios-menu)
 - **Advanced tab**
 - Boot Options
   - Startup Menu Delay (Sec.) : **05**
@@ -72,6 +73,8 @@ Here we go then :
 - Poweroff your laptop.
 
 #### Your Elitebook is now ready for MacOS !
+
+---
 
 ---
 
