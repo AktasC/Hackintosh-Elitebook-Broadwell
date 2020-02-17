@@ -1,5 +1,7 @@
 # Work In Progress
 
+Please checkout the `opencore` branch for the latest version
+
 ## Vanilla MacOS Mojave on an HP Elitebook 840 G2
 
 Welcome on another Hackintosh guide !
